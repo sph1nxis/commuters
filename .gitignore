@@ -1,0 +1,16 @@
+.cache/
+build/
+logs/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+.DS_Store
+*.tmp
+
