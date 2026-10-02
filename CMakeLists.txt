@@ -17,7 +17,6 @@ add_compile_options(
 add_library(commuters_engine STATIC
     src/engine/entity/entity.cpp
     src/engine/entity/entity_id.cpp
-    src/engine/entity/entity_id_hash.cpp
 
     src/engine/world/world.cpp
 )
