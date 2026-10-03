@@ -9,8 +9,16 @@ Entity World::CreateEntity() {
 }
 
 bool World::DestroyEntity(EntityId id) {
-    // erased 0 entites = failure; else success
-    return static_cast<bool>(entities.erase(id));
+    if (!HasEntity(id)) {
+        return false;
+    }
+
+    for (auto& [_, storage] : component_storages) {
+        storage->Remove(id);
+    }
+
+    entities.erase(id);
+    return true;
 }
 
 bool World::HasEntity(EntityId id) const {
